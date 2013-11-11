@@ -18,7 +18,7 @@ namespace WindowsFormsApplication5
 
         private void cmdCheck_Click(object sender, EventArgs e)
         {
-            string ans = ("คำตอบของคุณ คือ " + Environment.NewLine);
+            string ans = ("ลักษณะการดูแลรถของคุณ คือ " + Environment.NewLine);
             ans = ans + "เพศ : ";                                  //เพศ
             if (opt1.Checked == true)
             {
@@ -183,7 +183,11 @@ namespace WindowsFormsApplication5
             {
                 ans = ans + "ไม่ระบุ" + Environment.NewLine;
             }
-            MessageBox.Show(ans, "คำตอบของคุณ");
+            {
+                Form2 frm = new Form2();
+                frm.SetlblDestination = ans;
+                frm.Show();
+            }
 
         }
     }
